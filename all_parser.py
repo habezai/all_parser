@@ -26,6 +26,10 @@ class All_Parser(All_ParserUI):
             self.resultText.insert(tk.END,one_cfg[0]+' : ')
             this_part_str = hexstr[idx:idx+2*one_cfg[1]]
             self.resultText.insert(tk.END,this_part_str+"   ",'greenFore')
+#generate bin files
+            with open(one_cfg[0]+".bin","wb") as f:
+                f.write(bytes.fromhex(this_part_str))
+
             self.resultText.insert(tk.END,"\n                        ASCII: ")
             i = 0
             for i in range(0,2*one_cfg[1],2):
