@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39.3">
+  <project>
+    <settings>
+      <setting id="name">name111</setting>
+      <setting id="description">222333</setting>
+      <setting id="module_name">all_parser</setting>
+      <setting id="template">codescript</setting>
+      <setting id="main_widget">root</setting>
+      <setting id="main_classname">All_Parser</setting>
+      <setting id="main_menu" />
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">True</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+  </project>
+  <object class="tk.Tk" id="root" named="True">
+    <child>
+      <object class="ttk.Button" id="cfg_button" named="True">
+        <property name="text" translatable="yes">Select YAML On Disk</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">20</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="cfg_lable" named="True">
+        <property name="text" translatable="yes">Format File</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">20</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="cfg_entry" named="True">
+        <property name="text" translatable="yes">example.yaml</property>
+        <property name="width">30</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">20</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="dataLabel" named="True">
+        <property name="text" translatable="yes">Data File</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">10</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="dataEntry" named="True">
+        <property name="text" translatable="yes">example.bin</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">10</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="dataButton" named="True">
+        <property name="text" translatable="yes">Select bin On Disk</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">10</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Text" id="resultText" named="True">
+        <property name="height">20</property>
+        <property name="width">100</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">5</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">40</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="runButton" named="True">
+        <property name="command" type="command" cbtype="simple">runButtonClicked</property>
+        <property name="text" translatable="yes">Run</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">30</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Button" id="button2">
+        <property name="text" translatable="yes">Select On Disk</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label2" named="True">
+        <property name="text" translatable="yes">Config File</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry2">
+        <property name="text" translatable="yes">example.yaml</property>
+        <property name="width">30</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label3">
+        <property name="image">RSAES_OAEP.png</property>
+        <property name="text" translatable="yes">label3</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="columnspan">3</property>
+          <property name="row">1</property>
+          <property name="rowspan">2</property>
+          <property name="sticky">ew</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
